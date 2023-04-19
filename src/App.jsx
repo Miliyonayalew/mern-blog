@@ -4,6 +4,7 @@ import About from "./pages/About"
 import Article from "./pages/Article"
 import ArticleList from "./pages/ArticleList"
 import Navbar from "./components/Navbar"
+import NotFound from "./pages/NotFound"
 
 const App = () => {
 
@@ -14,8 +15,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/article" element={<Article />} />
           <Route path="/articleList" element={<ArticleList />} />
+          <Route path="/article/:name" element={<Article />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </BrowserRouter>
